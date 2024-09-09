@@ -1,0 +1,1 @@
+This is the project created following the course "Three-js tutorial" by Sean Bradley [Three-js tutorials](https://www.udemy.com/course/threejs-tutorials/) 
