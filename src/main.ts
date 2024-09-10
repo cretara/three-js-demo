@@ -185,9 +185,9 @@ function animate() {
 
     controls.update()
 
-    //characterController.update()
+    characterController.update()
 
-    mixer && mixer.update(delta)
+    mixer.update(delta)
 
     grid.update(delta, characterController.speed)
 
