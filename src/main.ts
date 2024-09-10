@@ -1,9 +1,9 @@
 import './style.css'
 import * as THREE from 'three'
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
-import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import { RGBELoader } from 'three/addons/loaders/RGBELoader.js'
 import Stats from 'three/addons/libs/stats.module.js'
-import {RGBELoader} from "three/examples/jsm/loaders/RGBELoader.js";
 import { Lensflare, LensflareElement } from 'three/addons/objects/Lensflare.js'
 
 const scene = new THREE.Scene()
@@ -14,9 +14,6 @@ light.angle = Math.PI / 16
 light.castShadow = true
 scene.add(light)
 
-/*const helper = new THREE.SpotLightHelper(light)
-scene.add(helper)*/
-
 new RGBELoader().load('img/venice_sunset_1k.hdr', (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping
     scene.environment = texture
@@ -25,7 +22,7 @@ new RGBELoader().load('img/venice_sunset_1k.hdr', (texture) => {
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
 camera.position.set(1.5, 0.75, 2)
 
-const renderer = new THREE.WebGLRenderer({antialias: true})
+const renderer = new THREE.WebGLRenderer({ antialias: true })
 renderer.toneMapping = THREE.ACESFilmicToneMapping
 renderer.toneMappingExposure = 0.1
 renderer.shadowMap.enabled = true
@@ -49,8 +46,6 @@ lensflare.addElement(new LensflareElement(textureFlare0, 1000, 0))
 light.add(lensflare)
 
 new GLTFLoader().load('models/suzanne_scene.glb', (gltf) => {
-    console.log(gltf)
-
     const suzanne = gltf.scene.getObjectByName('Suzanne') as THREE.Mesh
     suzanne.castShadow = true
 
