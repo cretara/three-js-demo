@@ -1,5 +1,5 @@
 import './style.css'
-import { Scene, PerspectiveCamera, WebGLRenderer, Clock } from 'three'
+import {Clock, PerspectiveCamera, Scene, WebGLRenderer} from 'three'
 import Stats from 'three/addons/libs/stats.module.js'
 import Game from './Game'
 
@@ -8,7 +8,7 @@ const scene = new Scene()
 const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
 camera.position.set(0, 0, 2)
 
-const renderer = new WebGLRenderer({ antialias: true })
+const renderer = new WebGLRenderer({antialias: true})
 renderer.setSize(window.innerWidth, window.innerHeight)
 renderer.shadowMap.enabled = true
 document.body.appendChild(renderer.domElement)

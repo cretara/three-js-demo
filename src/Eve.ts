@@ -10,7 +10,7 @@ export default class Eve extends Group {
         super()
 
         const dracoLoader = new DRACOLoader()
-        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/').setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
 
         this.glTFLoader = new GLTFLoader()
         this.glTFLoader.setDRACOLoader(dracoLoader)
