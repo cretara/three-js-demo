@@ -1,4 +1,4 @@
-import {AnimationAction, AnimationMixer, Group, Mesh} from 'three'
+import {AnimationAction, AnimationMixer, AnimationUtils, Group, Mesh} from 'three'
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
 import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js'
 
@@ -33,10 +33,10 @@ export default class Eve extends Group {
 
         this.mixer = new AnimationMixer(eve.scene)
         animationActions['idle'] = this.mixer.clipAction(idle.animations[0])
-        animationActions['walk'] = this.mixer.clipAction(eve.animations[0])
-        //animationActions['walk'] = this.mixer.clipAction(AnimationUtils.subclip(eve.animations[0], 'walk', 0, 42))
-        animationActions['run'] = this.mixer.clipAction(run.animations[0])
-        //animationActions['run'] = this.mixer.clipAction(AnimationUtils.subclip(run.animations[0], 'run', 0, 17))
+        // animationActions['walk'] = this.mixer.clipAction(eve.animations[0])
+        animationActions['walk'] = this.mixer.clipAction(AnimationUtils.subclip(eve.animations[0], 'walk', 0, 42))
+        // animationActions['run'] = this.mixer.clipAction(run.animations[0])
+        animationActions['run'] = this.mixer.clipAction(AnimationUtils.subclip(run.animations[0], 'run', 0, 17))
         // jump.animations[0].tracks = jump.animations[0].tracks.filter(function (e) {
         //   return !e.name.endsWith('.position')
         // })
