@@ -16,7 +16,7 @@ export default class Start {
 
             const body = world.createRigidBody(RigidBodyDesc.fixed().setTranslation(...position))
 
-            //const shape = ColliderDesc.cylinder(0.15, 3.7)
+            // const shape = ColliderDesc.cylinder(0.15, 3.7)
 
             const points = new Float32Array(mesh.geometry.attributes.position.array)
             const shape = ColliderDesc.convexHull(points) as ColliderDesc

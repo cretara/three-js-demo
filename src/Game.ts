@@ -9,6 +9,7 @@ import Start from './Start'
 import Finish from './Finish'
 import Spinner from './Spinner'
 import Pendulum from './Pendulum'
+import Platform from "./Platform.ts";
 
 export default class Game {
     scene: Scene
@@ -44,39 +45,39 @@ export default class Game {
 
         new Start(this.scene, this.world, [0, -0.5, 0])
 
-        // new Platform(this.scene, this.world, [1, 0.1, 2], [0, 0, 6])
+        new Platform(this.scene, this.world, [1, 0.1, 2], [0, 0, 6])
 
-        // new Platform(this.scene, this.world, [2.5, 0.1, 1], [3, 0.25, 6])
+        new Platform(this.scene, this.world, [2.5, 0.1, 1], [3, 0.25, 6])
 
-        // new Platform(this.scene, this.world, [2, 0.1, 1], [6, 1, 6])
+        new Platform(this.scene, this.world, [2, 0.1, 1], [6, 1, 6])
 
-        // new Platform(this.scene, this.world, [0.25, 0.1, 4.5], [6, 2, 2.25])
+        new Platform(this.scene, this.world, [0.25, 0.1, 4.5], [6, 2, 2.25])
 
-        // new Platform(this.scene, this.world, [4, 0.1, 5], [6, 2, -3])
+        new Platform(this.scene, this.world, [4, 0.1, 5], [6, 2, -3])
 
-        // this.spinners.push(new Spinner(this.scene, this.world, [6, 2.8, -3]))
+        this.spinners.push(new Spinner(this.scene, this.world, [6, 2.8, -3]))
 
-        // new Platform(this.scene, this.world, [1, 0.1, 2], [6.25, 2.5, -7.5])
+        new Platform(this.scene, this.world, [1, 0.1, 2], [6.25, 2.5, -7.5])
 
-        // new Platform(this.scene, this.world, [4, 0.1, 4], [2.5, 3, -8])
+        new Platform(this.scene, this.world, [4, 0.1, 4], [2.5, 3, -8])
 
-        // this.spinners.push(new Spinner(this.scene, this.world, [2.5, 3.8, -8]))
+        this.spinners.push(new Spinner(this.scene, this.world, [2.5, 3.8, -8]))
 
-        // new Platform(this.scene, this.world, [1, 0.1, 2.75], [1.5, 3.75, -3.25], [-Math.PI / 8, 0, 0])
+        new Platform(this.scene, this.world, [1, 0.1, 2.75], [1.5, 3.75, -3.25], [-Math.PI / 8, 0, 0])
 
-        // new Platform(this.scene, this.world, [6, 0.1, 1], [-1, 4.5, -1])
+        new Platform(this.scene, this.world, [6, 0.1, 1], [-1, 4.5, -1])
 
-        // this.pendulums.push(new Pendulum(this.scene, this.world, [0, 8, -1]))
+        this.pendulums.push(new Pendulum(this.scene, this.world, [0, 8, -1]))
 
-        // this.pendulums.push(new Pendulum(this.scene, this.world, [-2, 8, -1]))
+        this.pendulums.push(new Pendulum(this.scene, this.world, [-2, 8, -1]))
 
-        // new Platform(this.scene, this.world, [1.5, 0.1, 8], [-5.5, 4.5, 4.5], [0, 0, -Math.PI / 8])
+        new Platform(this.scene, this.world, [1.5, 0.1, 8], [-5.5, 4.5, 4.5], [0, 0, -Math.PI / 8])
 
-        // this.pendulums.push(new Pendulum(this.scene, this.world, [-5, 8, 2.5], Math.PI / 2))
+        this.pendulums.push(new Pendulum(this.scene, this.world, [-5, 8, 2.5], Math.PI / 2))
 
-        // this.pendulums.push(new Pendulum(this.scene, this.world, [-5, 8, 5], Math.PI / 2))
+        this.pendulums.push(new Pendulum(this.scene, this.world, [-5, 8, 5], Math.PI / 2))
 
-        // this.finish = new Finish(this.scene, this.world, [0, 4.0, 10])
+        this.finish = new Finish(this.scene, this.world, [0, 4.0, 10])
 
         this.player = new Player(this.scene, this.camera, this.renderer, this.world, [0, 0.1, 0], this.ui)
         await this.player.init()
