@@ -12,7 +12,7 @@
   "devDependencies": {
     "@dimforge/rapier3d-compat": "^0.14.0",
     "@types/three": "^0.168.0",
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "jeasings": "^0.0.15",
     "three": "^0.168.0",
     "typescript": "^5.5.3",
